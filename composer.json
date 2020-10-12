@@ -1,0 +1,23 @@
+{
+    "name": "alexeyyashin/ducktyping",
+    "description": "Simple duck-typing implementation for PHP",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexey Yashin",
+            "email": "me@alexey-yashin.ru"
+        }
+    ],
+    "require": {
+        "php": ">=7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "AlexeyYashin\\Ducktyping\\": "src/"
+        },
+        "files": [
+            "src/functions.php"
+        ]
+    }
+}
