@@ -34,6 +34,13 @@ Will return `true` if class `Duck` implements all that exist in class `Bird`
 Note that you can use either class name (as `string`) or `object` both in `duck_check` function and `implementing` 
 method
 
+```php
+$duck = new Duck;
+$bird = new Bird;
+
+duck_check($duck)->implementing($bird);
+```
+
 ---
 Check single method existence
 ```php
@@ -65,7 +72,7 @@ class Bird extends Animal
 ---
 It's obvious that
 ```php
-var_dump(new Bird instanceof Animal::class); // bool(true)
+var_dump(new Bird instanceof Animal); // bool(true)
 ```
 ---
 But if we add some independent class
@@ -83,7 +90,7 @@ class Duck
 we will get
 
 ```php
-var_dump(new Duck instanceof Bird::class); // bool(false)
+var_dump(new Duck instanceof Bird); // bool(false)
 ```
 despite the fact it can both "run" and "fly" just because class `Duck` doesn't extend class `Bird` .
 
